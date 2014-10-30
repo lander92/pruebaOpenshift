@@ -45,7 +45,7 @@
   ?>
    <script languaje="javascript">
     alert("Contraseña Incorrecta");
-    location.href = "index.php";
+    location.href = "../index.php";
    </script>
   <?php    
 	}
@@ -54,7 +54,7 @@
 ?>
  <script languaje="javascript">
   alert("El nombre de usuario es incorrecto!");
-  location.href = "index.php";
+  location.href = "../index.php";
  </script>
 <?php           
 }
