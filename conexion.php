@@ -1,6 +1,5 @@
 <?php
 // Database Connection Setting
-
  define( "DB_SERVER",    getenv('OPENSHIFT_MYSQL_DB_HOST') );
  
  define( "DB_USER",      getenv('OPENSHIFT_MYSQL_DB_USERNAME') );
