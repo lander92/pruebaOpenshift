@@ -16,9 +16,9 @@
 				//incluimos el archivo conexion.php para utilizar sus funciones
 				include '../conexion.php';
 				//guardo en variables el nombre de la bd y de la tabla que voy a utilizar
-				$base="gestorPacientes";
+				conectar();
+				selecDb();
 				$dbTabla="pacientes";
-				$conexion=conectar();
 				//guardo en variables los datos que recojo del formulario
 				$dni_medico=$_SESSION['dni'];
 				$dni_paciente=$_POST['dni_paciente'];
@@ -26,7 +26,7 @@
 				$consulta="DELETE FROM $dbTabla 
 							WHERE (dni_medico='$dni_medico') AND (dni_paciente='$dni_paciente')";
 				//ejecutamos la consulta
-				if(mysql_db_query($base, $consulta, $conexion)){
+				if(mysql_query($consulta)){
 					//si se ejecuta correctamente
 					print "<h3>Registro borrado</h3> <br>";
 				}else{

@@ -10,14 +10,14 @@
 		$historial = $_POST['historial'];
 		
 		include '../conexion.php';
-		$conexion=conectar();
-		$base='gestorPacientes';
+		conectar();
+		selecDb();
 		$dbTabla='pacientes';
 		$consulta = "UPDATE $dbTabla
 		    SET nombre='$nombre', apellidos='$apellidos', localidad='$localidad',
 		    telefono='$telefono', historial='$historial' 
 		    WHERE (dni_paciente='$dni') AND (dni_medico='$dni_medico')";
-		$result = mysql_db_query($base, $consulta, $conexion);
+		$result = mysql_query($consulta);
 		if ($result) {
 		    print "<h3>Registro modificado correctamente.</h3>";
 		} else {

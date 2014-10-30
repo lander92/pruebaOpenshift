@@ -17,9 +17,9 @@
 				//incluimos el archivo conexion.php para utilizar sus funciones
 				include '../conexion.php';
 				//guardo en variables el nombre de la bd y de la tabla que voy a utilizar
-				$base="gestorPacientes";
+				conectar();
+				selecDb();
 				$dbTabla="pacientes";
-				$conexion=conectar();
 				//guardo en variables los datos que recojo del formulario
 				$dni_medico=$_SESSION['dni'];
 				$dni_paciente=$_POST['dni'];
@@ -31,7 +31,7 @@
 				//guardo en $consulta la consulta que voy a ejecutar
 				$consulta="INSERT INTO $dbTabla (dni_medico,dni_paciente,nombre,apellidos,localidad,telefono,historial) VALUES ('$dni_medico','$dni_paciente','$nombre','$apellidos','$localidad','$telefono','$historial')";
 				//ejecutamos la consulta
-				if(mysql_db_query($base, $consulta, $conexion)){
+				if(mysql_query($consulta)){
 					//si se ejecuta correctamente
 					print "<h3>Registro añadido</h3> <br>";
 				}else{

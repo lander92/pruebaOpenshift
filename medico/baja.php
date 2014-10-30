@@ -18,15 +18,15 @@
 			//incluimos el archivo conexion.php para utilizar sus funciones
 			include '../conexion.php';
 			//guardo en variables el nombre de la bd y de la tabla que voy a utilizar
-			$base='gestorPacientes';
+			conectar();
+			selecDb();
 			$dbTabla='usuarios';
-			$conexion=conectar();
 			//guardo en una variable el dni guardado en la sesion
 			$dni=$_SESSION['dni'];
 			//guardo en $consulta la consulta que voy a ejecutar
 			$consulta= "DELETE FROM $dbTabla WHERE dni ='$dni'";
 			//ejecutamos la consulta
-			if(mysql_db_query($base, $consulta, $conexion)){
+			if(mysql_query($consulta)){
 				//si se ejecuta correctamente
 			?>
 				<script languaje="javascript">
