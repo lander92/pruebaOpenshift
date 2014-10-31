@@ -11,7 +11,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
          	 </button>
-          	<a class="navbar-brand" href="index.php">Osteopatia</a>
+          	<a class="navbar-brand" href="indexPacientes.php">Osteopatia</a>
         </div>
 	  	<!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse navbar-ex8-collapse">

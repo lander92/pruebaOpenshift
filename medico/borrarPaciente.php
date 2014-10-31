@@ -15,11 +15,12 @@
 			if(!empty($_POST['dni_paciente'])){
 				//incluimos el archivo conexion.php para utilizar sus funciones
 				include '../conexion.php';
-				//guardo en variables el nombre de la bd y de la tabla que voy a utilizar
+				//llamo a las funciones para conectarme a la bd y seleccionar la bd
 				conectar();
 				selecDb();
+				//guardo en una variable el nombre de la tabla que voy a usar
 				$dbTabla="pacientes";
-				//guardo en variables los datos que recojo del formulario
+				//guardo en variables el dni guardado en la sesion y el dni introducido en el formulario
 				$dni_medico=$_SESSION['dni'];
 				$dni_paciente=$_POST['dni_paciente'];
 				//guardo en $consulta la consulta que voy a ejecutar
@@ -33,9 +34,13 @@
 					//si no se ejecuta correctamente
 					print "<h3>Registro  no borrado</h3> <br>";
 				}
+				//cierro la conexion
+				mysql_close();
+			//si no ha introducido dni	
 			}else{
 				print "<h3>DNI Obligatorio</h3>";
 			}
+		//si no se ha pulsado el boton	
 		}else{
 ?>
 		<div class="content row col-sm-6 col-md-6" >

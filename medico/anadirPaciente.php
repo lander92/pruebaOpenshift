@@ -16,9 +16,10 @@
 			if(!empty($_POST['dni'])){
 				//incluimos el archivo conexion.php para utilizar sus funciones
 				include '../conexion.php';
-				//guardo en variables el nombre de la bd y de la tabla que voy a utilizar
+				//llamo a las funciones para conectarme a la bd y seleccionar la bd
 				conectar();
 				selecDb();
+				//guardo en una variable el nombre de la tabla que voy a usar
 				$dbTabla="pacientes";
 				//guardo en variables los datos que recojo del formulario
 				$dni_medico=$_SESSION['dni'];
@@ -38,9 +39,13 @@
 					//si no se ejecuta correctamente
 					print "<h3>Registro  no añadido</h3> <br>";
 				}
+				//cierro la conexion
+				mysql_close();
+			//si no ha introducido el dni	
 			}else{
 				print "<h3>DNI Obligatorio</h3>";
 			}
+		//si no ha pulsado el boton	
 		}else{
 		?>
 			<form role="form" method="post" action=<?php echo $_SERVER['PHP_SELF']?>>
