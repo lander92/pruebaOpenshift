@@ -24,6 +24,6 @@
     
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="../js/miapp.js"></script>
 </body>
 </html>
