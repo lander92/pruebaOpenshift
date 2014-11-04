@@ -18,6 +18,10 @@ if(!getenv('OPENSHIFT_MYSQL_DB_HOST')){
 	 
 	 define( "DB_DATABASE",  getenv('OPENSHIFT_APP_NAME') );
 	
+	 /*$server=getenv('OPENSHIFT_MYSQL_DB_HOST');
+	 $user=getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+	 $password=getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+	 $db=getenv('OPENSHIFT_APP_NAME');*/
 	function conectar(){
 	$conexion=mysql_connect(DB_SERVER,DB_USER,DB_PASSWORD) or die(mysql_error());
 	return $conexion;

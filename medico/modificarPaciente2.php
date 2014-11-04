@@ -41,7 +41,7 @@
 	}else{
 ?>
 	<label>Introduzca los datos del paciente a modificar</label>
-			<form role="form" method="post" action=<?php echo $_SERVER['PHP_SELF']?>>
+			<form id="formulario" role="form" method="post" action=<?php echo $_SERVER['PHP_SELF']?>>
 				<div class="form-group">
 			    	<label for="dni">DNI:</label>
 			    	<input type="text" class="form-control" id="dni" name="dni">

@@ -44,8 +44,8 @@
 	  	//En caso que la contraseña sea incorrecta enviamos un msj y redireccionamos a index.php
   ?>
    <script languaje="javascript">
-    alert("Contraseña Incorrecta");
-    location.href = "../index.php";
+	alert("Contraseña Incorrecta");
+	location.href = "../index.php";
    </script>
   <?php    
 	}

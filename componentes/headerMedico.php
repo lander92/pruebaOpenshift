@@ -17,13 +17,13 @@
 	    <div class="collapse navbar-collapse navbar-ex8-collapse">
 		    <ul class="nav navbar-nav">
 		    	<li><a href="indexMedico.php" checked><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-		    	<li><a href="listarPacientes.php"><span class="glyphicon glyphicon-list-alt"></span> Lista</a></li>
+		    	<li><a href="listarPacientes.php#listar"><span class="glyphicon glyphicon-list-alt"></span> Lista</a></li>
 			    <li><a href="buscarPaciente.php"><span class="glyphicon glyphicon-search"></span> Buscar</a></li>
 		   		<li><a href="anadirPaciente.php"><span class="glyphicon glyphicon-plus-sign"></span> Añadir Paciente</a></li>
 			    <li><a href="borrarPaciente.php"><span class="glyphicon glyphicon-remove-sign"></span> Borrar Paciente</a></li>
 			    <li><a href="modificarPaciente.php"><span class="glyphicon glyphicon-cog"></span> Modificar Paciente</a></li>
 			    <!-- <li><a href="borrarTodo.php"><span class="glyphicon glyphicon-trash"></span> Borrar Todo</a></li> -->
-			    <li><a href="baja.php"><span class="glyphicon glyphicon-thumbs-down"></span> Darse de baja</a></li>
+			    <li><a href="#"><span class="glyphicon glyphicon-thumbs-down"></span> Darse de baja</a></li>
 			    <li><a href="../logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 		    </ul>
 		</div><!-- /.navbar-collapse -->
