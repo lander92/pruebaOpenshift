@@ -50,7 +50,7 @@ $(document).ready(function() {
                     },
                     regexp: {
                         regexp: /^[a-zA-Z]+$/,
-                        message: 'El dni solo puede contener letras'
+                        message: 'El nombre solo puede contener letras'
                     }
                 }
             },
@@ -62,7 +62,7 @@ $(document).ready(function() {
                     },
                     regexp: {
                         regexp: /^[a-zA-Z]+$/,
-                        message: 'El dni solo puede contener letras'
+                        message: 'Los apellidos solo pueden contener letras'
                     }
                 }
             },
@@ -85,7 +85,7 @@ $(document).ready(function() {
                     },
                     regexp: {
                         regexp: /^[a-zA-Z]+$/,
-                        message: 'El dni solo puede contener letras'
+                        message: 'La localidad solo puede contener letras'
                     }
                 }
             },
@@ -141,4 +141,15 @@ $(document).ready(function(){
 			location.href = "baja2.php";
 		}
 	});
+});
+
+/*$(document).ready(function(){
+	$("#modal").modal({show:true});
+});*/
+$(document).ready(function(){
+	function showMensaje(titulo,mensaje){
+		$("#titModal").text(titulo);
+		$("#bodyModal").text(mensaje);
+		$('#modal').modal('show');
+	}
 });
