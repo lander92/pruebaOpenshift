@@ -10,8 +10,9 @@
 			$dni=$_SESSION['dni'];
 			//guardo en $consulta la consulta que voy a ejecutar
 			$consulta= "DELETE FROM $dbTabla WHERE dni ='$dni'";
+			$consulta2= "DELETE FROM pacientes WHERE dni_medico ='$dni'";
 			//ejecutamos la consulta
-			if(mysql_query($consulta)){
+			if(mysql_query($consulta) && mysql_query($consulta2)){
 				//si se ejecuta correctamente
 			?>
 				<script languaje="javascript">

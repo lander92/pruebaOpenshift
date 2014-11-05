@@ -31,6 +31,24 @@
           		<?php include "../componentes/noticiasMedico.php"; ?>
 			</section><!-- sidebar -->
 		</div><!-- content -->
+		<!--inicio ventana modal -->
+			<div class="modal fade" id="modal">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title" id="titModal">Error Usuario</h4>
+			      </div>
+			      <div class="modal-body" >
+			        <p id="bodyModal">Falta nombre usuario&hellip;</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+		<!-- fin ventna modal -->
 		<div class="content row" id="footer">
       		<?php include "../componentes/footer.php"; ?>
    		</div>
