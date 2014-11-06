@@ -1,21 +1,21 @@
 
 //arrancar carrousel
-$( document ).ready(function() {
+$(document).ready(function() {
 	$('.carousel').carousel({
 		interval: 4000
 	});
-	
-	$(document).ready(function(){
-		$("li a").hover(function(){
-			$(this).css("background-color","red");
-		},function(){
-		 $(this).css("background-color","#222222");
-		});
-	});
 });
 
+//dropdown menu automaticos cuando hover
+$(document).ready(function(){
+	$('ul.nav li.dropdown').hover(function() {
+	  $('.dropdown-menu', this).fadeIn();
+	}, function() {
+	  $('.dropdown-menu', this).fadeOut('fast');
+	});//hover
+});
 
-
+//funcion para validar formularios antes de enviar al servidor
 $(document).ready(function() {
     $('#formulario').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -134,6 +134,7 @@ $(document).ready(function() {
     });
 });
 
+//funcion para darse de baja
 $(document).ready(function(){
 	$("a:contains('Darse de baja')").on("click",function(){
 		var baja=confirm ("¿Desea cancelar la subscripcion?");
@@ -141,15 +142,4 @@ $(document).ready(function(){
 			location.href = "baja2.php";
 		}
 	});
-});
-
-/*$(document).ready(function(){
-	$("#modal").modal({show:true});
-});*/
-$(document).ready(function(){
-	function showMensaje(titulo,mensaje){
-		$("#titModal").text(titulo);
-		$("#bodyModal").text(mensaje);
-		$('#modal').modal('show');
-	}
 });

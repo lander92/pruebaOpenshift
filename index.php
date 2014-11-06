@@ -73,6 +73,5 @@
 
     <!--añadir mi javascript-->
    <script src="js/miapp.js"></script>
-   
   </body>
 </html>
